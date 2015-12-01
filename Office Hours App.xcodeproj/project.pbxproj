@@ -13,6 +13,7 @@
 		DCEB6AFF1C0BE3D100A0EFB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCEB6AFE1C0BE3D100A0EFB7 /* Assets.xcassets */; };
 		DCEB6B021C0BE3D100A0EFB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEB6B001C0BE3D100A0EFB7 /* LaunchScreen.storyboard */; };
 		DCEB6B0D1C0BE3D100A0EFB7 /* Office_Hours_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB6B0C1C0BE3D100A0EFB7 /* Office_Hours_AppTests.swift */; };
+		DCEB6B181C0D09EA00A0EFB7 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB6B171C0D09E900A0EFB7 /* StudentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DCEB6B081C0BE3D100A0EFB7 /* Office Hours AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Office Hours AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEB6B0C1C0BE3D100A0EFB7 /* Office_Hours_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_Hours_AppTests.swift; sourceTree = "<group>"; };
 		DCEB6B0E1C0BE3D100A0EFB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCEB6B171C0D09E900A0EFB7 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				DCEB6AF71C0BE3D000A0EFB7 /* AppDelegate.swift */,
 				DCEB6AF91C0BE3D100A0EFB7 /* ViewController.swift */,
 				DCEB6AFB1C0BE3D100A0EFB7 /* Main.storyboard */,
+				DCEB6B171C0D09E900A0EFB7 /* StudentTableViewCell.swift */,
 				DCEB6AFE1C0BE3D100A0EFB7 /* Assets.xcassets */,
 				DCEB6B001C0BE3D100A0EFB7 /* LaunchScreen.storyboard */,
 				DCEB6B031C0BE3D100A0EFB7 /* Info.plist */,
@@ -146,6 +149,7 @@
 				TargetAttributes = {
 					DCEB6AF31C0BE3D000A0EFB7 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 582B3L6MUT;
 					};
 					DCEB6B071C0BE3D100A0EFB7 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -199,6 +203,7 @@
 			files = (
 				DCEB6AFA1C0BE3D100A0EFB7 /* ViewController.swift in Sources */,
 				DCEB6AF81C0BE3D000A0EFB7 /* AppDelegate.swift in Sources */,
+				DCEB6B181C0D09EA00A0EFB7 /* StudentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Office Hours App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Office-Hours-App";
@@ -338,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Office Hours App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Office-Hours-App";
@@ -388,6 +395,7 @@
 				DCEB6B131C0BE3D100A0EFB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCEB6B141C0BE3D100A0EFB7 /* Build configuration list for PBXNativeTarget "Office Hours AppTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +404,7 @@
 				DCEB6B161C0BE3D100A0EFB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
