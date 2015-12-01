@@ -87,6 +87,9 @@
                                 <rect key="frame" x="20" y="177" width="560" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit!"/>
+                                <connections>
+                                    <segue destination="v7c-iK-maY" kind="show" id="x5m-qv-OZO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -96,6 +99,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLb-po-nqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1898" y="315"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oVu-lE-q4O">
+            <objects>
+                <viewController id="v7c-iK-maY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XpI-AU-el8"/>
+                        <viewControllerLayoutGuide type="bottom" id="dI4-qx-jE9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l7B-Nf-P2G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you. Someone will be with you shortly." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oA-Tc-H0y">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ykc-GQ-pSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2656" y="315"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
