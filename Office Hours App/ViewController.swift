@@ -8,15 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     
     @IBOutlet weak var studentName: UITextField!
 
+    @IBOutlet weak var studentNameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Handle the text field’s user input through delegate callbacks.
+        studentName.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +29,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        studentNameLabel.text = textField.text
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func setDefaultLabelText(sender: UIButton) {
+        studentNameLabel.text = "Default Text"
+    }
+    
 
 }
 

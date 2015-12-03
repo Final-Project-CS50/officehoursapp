@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCC5A6E61C10CFCC008FA6C2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5A6E51C10CFCC008FA6C2 /* Student.swift */; };
+		DCC5A6E71C10CFCC008FA6C2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5A6E51C10CFCC008FA6C2 /* Student.swift */; };
+		DCC5A6E91C10D28D008FA6C2 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5A6E81C10D28D008FA6C2 /* StudentTableViewController.swift */; };
 		DCEB6AF81C0BE3D000A0EFB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB6AF71C0BE3D000A0EFB7 /* AppDelegate.swift */; };
 		DCEB6AFA1C0BE3D100A0EFB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB6AF91C0BE3D100A0EFB7 /* ViewController.swift */; };
 		DCEB6AFD1C0BE3D100A0EFB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEB6AFB1C0BE3D100A0EFB7 /* Main.storyboard */; };
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DCC5A6E51C10CFCC008FA6C2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		DCC5A6E81C10D28D008FA6C2 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		DCEB6AF41C0BE3D000A0EFB7 /* Office Hours App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office Hours App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEB6AF71C0BE3D000A0EFB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCEB6AF91C0BE3D100A0EFB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +86,9 @@
 			children = (
 				DCEB6AF71C0BE3D000A0EFB7 /* AppDelegate.swift */,
 				DCEB6AF91C0BE3D100A0EFB7 /* ViewController.swift */,
+				DCC5A6E51C10CFCC008FA6C2 /* Student.swift */,
 				DCEB6AFB1C0BE3D100A0EFB7 /* Main.storyboard */,
+				DCC5A6E81C10D28D008FA6C2 /* StudentTableViewController.swift */,
 				DCEB6B171C0D09E900A0EFB7 /* StudentTableViewCell.swift */,
 				DCEB6AFE1C0BE3D100A0EFB7 /* Assets.xcassets */,
 				DCEB6B001C0BE3D100A0EFB7 /* LaunchScreen.storyboard */,
@@ -204,6 +211,8 @@
 				DCEB6AFA1C0BE3D100A0EFB7 /* ViewController.swift in Sources */,
 				DCEB6AF81C0BE3D000A0EFB7 /* AppDelegate.swift in Sources */,
 				DCEB6B181C0D09EA00A0EFB7 /* StudentTableViewCell.swift in Sources */,
+				DCC5A6E91C10D28D008FA6C2 /* StudentTableViewController.swift in Sources */,
+				DCC5A6E61C10CFCC008FA6C2 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCEB6B0D1C0BE3D100A0EFB7 /* Office_Hours_AppTests.swift in Sources */,
+				DCC5A6E71C10CFCC008FA6C2 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
