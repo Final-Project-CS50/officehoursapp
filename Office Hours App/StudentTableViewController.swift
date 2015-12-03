@@ -107,5 +107,14 @@ class StudentTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToStudentList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? StudentViewController, student = sourceViewController.student {
+            // Add a new student.
+            let newIndexPath = NSIndexPath(forRow: students.count, inSection: 0)
+            students.append(student)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
 
 }

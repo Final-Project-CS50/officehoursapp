@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StudentViewController.swift
 //  Office Hours App
 //
 //  Created by Mark Kelsey on 2015-11-29.
@@ -8,14 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class StudentViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     
     @IBOutlet weak var studentName: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
 
-    @IBOutlet weak var studentNameLabel: UILabel!
     
+    /*
+    This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
+    or constructed as part of adding a new meal.
+    */
+    var student: Student?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +43,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        studentNameLabel.text = textField.text
+        
+    }
+    
+    // MARK: navigation
+    
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if submitButton === sender {
+            let name = studentName.text ?? ""
+            
+            // Set the meal to be passed to MealTableViewController after the unwind segue.
+            student = Student(name: name)
+        }
     }
     
     // MARK: Actions
     
-    @IBAction func setDefaultLabelText(sender: UIButton) {
-        studentNameLabel.text = "Default Text"
-    }
+
     
 
 }
