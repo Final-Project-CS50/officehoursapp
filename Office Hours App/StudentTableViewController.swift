@@ -25,9 +25,9 @@ class StudentTableViewController: UITableViewController {
 
     func loadSampleStudents(){
         
-        let student1 = Student(name: "Jimmy")!
-        let student2 = Student(name: "John Jack")!
-        let student3 = Student(name: "Pierre")!
+        let student1 = Student(name: "Jimmy", problem: "The Mario Game")!
+        let student2 = Student(name: "John Jack", problem: "Building a hash table")!
+        let student3 = Student(name: "Pierre", problem: "Code won't compile")!
         
         students += [student1, student2, student3]
     }
@@ -54,11 +54,12 @@ class StudentTableViewController: UITableViewController {
         let cellIdentifier = "StudentTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! StudentTableViewCell
         
-        // Fetches the appropriate meal for the data source layout.
+        // Fetches the appropriate student for the data source layout.
         let student = students[indexPath.row]
 
         cell.nameLabel.text = student.name
-
+        cell.problemLabel.text = student.problem
+        
         return cell
     }
     

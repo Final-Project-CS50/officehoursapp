@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hUC-iS-Bzh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xvW-TK-ve7">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -29,12 +29,20 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsV-Vv-TOU">
+                                            <rect key="frame" x="8" y="37" width="584" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
                                     <outlet property="nameLabel" destination="Pgd-pj-9Mk" id="b0V-qD-dZH"/>
+                                    <outlet property="problemLabel" destination="bsV-Vv-TOU" id="LVM-ui-ocB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -109,11 +117,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KV5-CW-RLI">
-                                <rect key="frame" x="20" y="229" width="279" height="30"/>
-                                <animations/>
-                                <state key="normal" title="(I'm a TF)"/>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Which problem are you stuck on?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPM-ry-Vdd">
                                 <rect key="frame" x="20" y="149" width="279" height="30"/>
                                 <animations/>
@@ -127,6 +130,7 @@
                     <navigationItem key="navigationItem" title="Home" id="PJy-Yx-W6W"/>
                     <connections>
                         <outlet property="studentName" destination="aY2-KO-PU3" id="k6M-BZ-nXt"/>
+                        <outlet property="studentProblem" destination="YPM-ry-Vdd" id="UDN-vX-nhZ"/>
                         <outlet property="submitButton" destination="5H3-FI-FmS" id="BUL-Na-zEo"/>
                     </connections>
                 </viewController>
@@ -153,6 +157,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3XB-ut-xfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="822" y="1147"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HVQ-W9-hIu">
+            <objects>
+                <viewController id="2X3-cD-C6w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZVH-zn-n7w"/>
+                        <viewControllerLayoutGuide type="bottom" id="IcA-Mq-OW0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qh3-B8-aqs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to CS50 Office Hours!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGs-HQ-hRC">
+                                <rect key="frame" x="20" y="167" width="320" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-Zk-NBi">
+                                <rect key="frame" x="20" y="196" width="320" height="207"/>
+                                <animations/>
+                                <string key="text">We know that this can be a stressful experience, so we've developed an app to help TF's more efficiently attend to students.
+
+When you enter the app, you'll see a blue (+) sign on the top right corner. Press that button and provide us with a bit of information, and you'll be added to the list.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybD-Ra-3MS">
+                                <rect key="frame" x="20" y="411" width="117" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Let's get started!"/>
+                                <connections>
+                                    <segue destination="hUC-iS-Bzh" kind="show" id="Ie9-3G-8di"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P5T-PN-elj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rl3-qK-r7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="1852"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yvp-pw-qDh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xvW-TK-ve7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEr-DO-lvF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2X3-cD-C6w" kind="relationship" relationship="rootViewController" id="BXM-EV-o3s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eK9-6U-8QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="1852"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,7 @@ class StudentTableViewCell: UITableViewCell {
     // MARK: Properties
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var problemLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -14,6 +14,7 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var studentName: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var studentProblem: UITextField!
 
     
     /*
@@ -52,9 +53,10 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if submitButton === sender {
             let name = studentName.text ?? ""
+            let problem = studentProblem.text ?? ""
             
             // Set the meal to be passed to MealTableViewController after the unwind segue.
-            student = Student(name: name)
+            student = Student(name: name, problem: problem)
         }
     }
     

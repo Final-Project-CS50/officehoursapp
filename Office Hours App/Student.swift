@@ -13,16 +13,18 @@ class Student {
     // MARK: Properties
     
     var name: String
+    var problem: String
     
     // MARK: Initialization
     
-    init?(name: String){
+    init?(name: String, problem: String){
     
         // Initialize stored properties.
         self.name = name
+        self.problem = problem
         
         // Initialization should fail if there is no name.
-        if name.isEmpty {
+        if name.isEmpty || problem.isEmpty {
             return nil
         }
         
