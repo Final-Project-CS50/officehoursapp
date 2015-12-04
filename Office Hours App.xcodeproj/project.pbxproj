@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC7A68B11C112A630075FD1E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B01C112A630075FD1E /* Parse.framework */; };
+		DC7A68B31C112A700075FD1E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B21C112A700075FD1E /* Bolts.framework */; };
+		DC7A68B51C112AE40075FD1E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B41C112AE40075FD1E /* AudioToolbox.framework */; };
+		DC7A68B71C112AEC0075FD1E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B61C112AEC0075FD1E /* CFNetwork.framework */; };
+		DC7A68B91C112AF90075FD1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B81C112AF90075FD1E /* CoreGraphics.framework */; };
+		DC7A68BB1C112B040075FD1E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68BA1C112B040075FD1E /* CoreLocation.framework */; };
+		DC7A68BD1C112B150075FD1E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68BC1C112B150075FD1E /* QuartzCore.framework */; };
+		DC7A68BF1C112B1D0075FD1E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68BE1C112B1D0075FD1E /* Security.framework */; };
+		DC7A68C11C112B270075FD1E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68C01C112B270075FD1E /* StoreKit.framework */; };
+		DC7A68C31C112B330075FD1E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68C21C112B330075FD1E /* SystemConfiguration.framework */; };
+		DC7A68C51C112B410075FD1E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68C41C112B410075FD1E /* libz.tbd */; };
+		DC7A68C71C112B5A0075FD1E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68C61C112B5A0075FD1E /* libsqlite3.tbd */; };
 		DCC5A6E61C10CFCC008FA6C2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5A6E51C10CFCC008FA6C2 /* Student.swift */; };
 		DCC5A6E71C10CFCC008FA6C2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5A6E51C10CFCC008FA6C2 /* Student.swift */; };
 		DCC5A6E91C10D28D008FA6C2 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5A6E81C10D28D008FA6C2 /* StudentTableViewController.swift */; };
@@ -30,6 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC7A68B01C112A630075FD1E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DC7A68B21C112A700075FD1E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DC7A68B41C112AE40075FD1E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DC7A68B61C112AEC0075FD1E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DC7A68B81C112AF90075FD1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC7A68BA1C112B040075FD1E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC7A68BC1C112B150075FD1E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DC7A68BE1C112B1D0075FD1E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DC7A68C01C112B270075FD1E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DC7A68C21C112B330075FD1E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC7A68C41C112B410075FD1E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DC7A68C61C112B5A0075FD1E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DCC5A6E51C10CFCC008FA6C2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		DCC5A6E81C10D28D008FA6C2 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		DCEB6AF41C0BE3D000A0EFB7 /* Office Hours App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Office Hours App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +74,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7A68C71C112B5A0075FD1E /* libsqlite3.tbd in Frameworks */,
+				DC7A68C51C112B410075FD1E /* libz.tbd in Frameworks */,
+				DC7A68C31C112B330075FD1E /* SystemConfiguration.framework in Frameworks */,
+				DC7A68C11C112B270075FD1E /* StoreKit.framework in Frameworks */,
+				DC7A68BF1C112B1D0075FD1E /* Security.framework in Frameworks */,
+				DC7A68BD1C112B150075FD1E /* QuartzCore.framework in Frameworks */,
+				DC7A68BB1C112B040075FD1E /* CoreLocation.framework in Frameworks */,
+				DC7A68B91C112AF90075FD1E /* CoreGraphics.framework in Frameworks */,
+				DC7A68B71C112AEC0075FD1E /* CFNetwork.framework in Frameworks */,
+				DC7A68B51C112AE40075FD1E /* AudioToolbox.framework in Frameworks */,
+				DC7A68B11C112A630075FD1E /* Parse.framework in Frameworks */,
+				DC7A68B31C112A700075FD1E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +102,18 @@
 		DCEB6AEB1C0BE3D000A0EFB7 = {
 			isa = PBXGroup;
 			children = (
+				DC7A68C61C112B5A0075FD1E /* libsqlite3.tbd */,
+				DC7A68C41C112B410075FD1E /* libz.tbd */,
+				DC7A68C21C112B330075FD1E /* SystemConfiguration.framework */,
+				DC7A68C01C112B270075FD1E /* StoreKit.framework */,
+				DC7A68BE1C112B1D0075FD1E /* Security.framework */,
+				DC7A68BC1C112B150075FD1E /* QuartzCore.framework */,
+				DC7A68BA1C112B040075FD1E /* CoreLocation.framework */,
+				DC7A68B81C112AF90075FD1E /* CoreGraphics.framework */,
+				DC7A68B61C112AEC0075FD1E /* CFNetwork.framework */,
+				DC7A68B41C112AE40075FD1E /* AudioToolbox.framework */,
+				DC7A68B21C112A700075FD1E /* Bolts.framework */,
+				DC7A68B01C112A630075FD1E /* Parse.framework */,
 				DCEB6AF61C0BE3D000A0EFB7 /* Office Hours App */,
 				DCEB6B0B1C0BE3D100A0EFB7 /* Office Hours AppTests */,
 				DCEB6AF51C0BE3D000A0EFB7 /* Products */,
@@ -343,6 +391,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Office Hours App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Office-Hours-App";
@@ -355,6 +407,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Office Hours App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Office-Hours-App";

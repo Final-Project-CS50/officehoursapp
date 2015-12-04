@@ -137,7 +137,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="a9P-wE-Kgo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="832" y="1959"/>
+            <point key="canvasLocation" x="2264" y="761"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yCi-UQ-yMa">
@@ -194,6 +194,11 @@ When you enter the app, you'll see a blue (+) sign on the top right corner. Pres
                                 <connections>
                                     <segue destination="hUC-iS-Bzh" kind="show" id="Ie9-3G-8di"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw2-el-egF">
+                                <rect key="frame" x="20" y="449" width="89" height="30"/>
+                                <animations/>
+                                <state key="normal" title="I'm a student"/>
                             </button>
                         </subviews>
                         <animations/>
