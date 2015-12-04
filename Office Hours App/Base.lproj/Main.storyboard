@@ -61,7 +61,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNK-hy-RW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="1147"/>
+            <point key="canvasLocation" x="1538" y="1147"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oVu-lE-q4O">
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ykc-GQ-pSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2656" y="315"/>
+            <point key="canvasLocation" x="3052" y="-389"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
@@ -137,7 +137,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="a9P-wE-Kgo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2404" y="1147"/>
+            <point key="canvasLocation" x="832" y="1959"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yCi-UQ-yMa">
@@ -203,7 +203,7 @@ When you enter the app, you'll see a blue (+) sign on the top right corner. Pres
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rl3-qK-r7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="1852"/>
+            <point key="canvasLocation" x="1538" y="344"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yvp-pw-qDh">
@@ -222,7 +222,7 @@ When you enter the app, you'll see a blue (+) sign on the top right corner. Pres
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK9-6U-8QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="1852"/>
+            <point key="canvasLocation" x="822" y="344"/>
         </scene>
     </scenes>
 </document>
