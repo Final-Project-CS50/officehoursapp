@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 
+
 class StudentTableViewController: UITableViewController {
     
     // MARK: Properties
@@ -21,8 +22,11 @@ class StudentTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem()
         
+        loadCloudStudents()
+        
         // Load the sample data.
         loadSampleStudents()
+        
         
     }
 
@@ -31,8 +35,38 @@ class StudentTableViewController: UITableViewController {
         let student1 = Student(name: "Jimmy", problem: "The Mario Game")!
         let student2 = Student(name: "John Jack", problem: "Building a hash table")!
         let student3 = Student(name: "Pierre", problem: "Code won't compile")!
+
+        self.students += [student1, student2, student3]
+    }
+    
+    func loadCloudStudents(){
+                let query = PFQuery(className:"Student")
+                query.findObjectsInBackgroundWithBlock {
+                    (objects: [PFObject]?, error: NSError?) -> Void in
+                        if error == nil {
+                            // The find succeeded.
+                            print("Successfully retrieved \(objects!.count) scores.")
+                            // Do something with the found objects
+                            if let object = objects {
+                                for o in object {
+                                    let name = o.objectForKey("name") as! String
+                                    let problem = o.objectForKey("problem") as! String
+                                    print(self.students)
+                                    let tmp_student = Student(name: name, problem: problem)!
+                                    self.students += [tmp_student]
+                                }
+                            }
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.tableView.reloadData()
+                            }
+//                            let tmp_student = Student(name: "mark", problem: "CS50")!
+                            
+                        } else {
+                            // Log details of the failure
+                            print("Error: \(error!) \(error!.userInfo)")
+                            }
+                        }
         
-        students += [student1, student2, student3]
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,6 +81,7 @@ class StudentTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(students.count)
         return  students.count
     }
 
@@ -56,7 +91,7 @@ class StudentTableViewController: UITableViewController {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "StudentTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! StudentTableViewCell
-        
+
         // Fetches the appropriate student for the data source layout.
         let student = students[indexPath.row]
 

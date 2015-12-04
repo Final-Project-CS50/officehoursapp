@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC7A68B11C112A630075FD1E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B01C112A630075FD1E /* Parse.framework */; };
-		DC7A68B31C112A700075FD1E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B21C112A700075FD1E /* Bolts.framework */; };
 		DC7A68B51C112AE40075FD1E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B41C112AE40075FD1E /* AudioToolbox.framework */; };
 		DC7A68B71C112AEC0075FD1E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B61C112AEC0075FD1E /* CFNetwork.framework */; };
 		DC7A68B91C112AF90075FD1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A68B81C112AF90075FD1E /* CoreGraphics.framework */; };
@@ -29,6 +27,8 @@
 		DCEB6B021C0BE3D100A0EFB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEB6B001C0BE3D100A0EFB7 /* LaunchScreen.storyboard */; };
 		DCEB6B0D1C0BE3D100A0EFB7 /* Office_Hours_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB6B0C1C0BE3D100A0EFB7 /* Office_Hours_AppTests.swift */; };
 		DCEB6B181C0D09EA00A0EFB7 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB6B171C0D09E900A0EFB7 /* StudentTableViewCell.swift */; };
+		DCF64C7C1C1172EA00FB48E3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF64C7B1C1172EA00FB48E3 /* Bolts.framework */; };
+		DCF64C7E1C1172F300FB48E3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF64C7D1C1172F300FB48E3 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC7A68B01C112A630075FD1E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		DC7A68B21C112A700075FD1E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DC7A68B41C112AE40075FD1E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC7A68B61C112AEC0075FD1E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DC7A68B81C112AF90075FD1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,6 +65,8 @@
 		DCEB6B0C1C0BE3D100A0EFB7 /* Office_Hours_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office_Hours_AppTests.swift; sourceTree = "<group>"; };
 		DCEB6B0E1C0BE3D100A0EFB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCEB6B171C0D09E900A0EFB7 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		DCF64C7B1C1172EA00FB48E3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DCF64C7D1C1172F300FB48E3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +82,10 @@
 				DC7A68BD1C112B150075FD1E /* QuartzCore.framework in Frameworks */,
 				DC7A68BB1C112B040075FD1E /* CoreLocation.framework in Frameworks */,
 				DC7A68B91C112AF90075FD1E /* CoreGraphics.framework in Frameworks */,
+				DCF64C7C1C1172EA00FB48E3 /* Bolts.framework in Frameworks */,
 				DC7A68B71C112AEC0075FD1E /* CFNetwork.framework in Frameworks */,
+				DCF64C7E1C1172F300FB48E3 /* Parse.framework in Frameworks */,
 				DC7A68B51C112AE40075FD1E /* AudioToolbox.framework in Frameworks */,
-				DC7A68B11C112A630075FD1E /* Parse.framework in Frameworks */,
-				DC7A68B31C112A700075FD1E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +102,8 @@
 		DCEB6AEB1C0BE3D000A0EFB7 = {
 			isa = PBXGroup;
 			children = (
+				DCF64C7D1C1172F300FB48E3 /* Parse.framework */,
+				DCF64C7B1C1172EA00FB48E3 /* Bolts.framework */,
 				DC7A68C61C112B5A0075FD1E /* libsqlite3.tbd */,
 				DC7A68C41C112B410075FD1E /* libz.tbd */,
 				DC7A68C21C112B330075FD1E /* SystemConfiguration.framework */,
@@ -112,8 +114,6 @@
 				DC7A68B81C112AF90075FD1E /* CoreGraphics.framework */,
 				DC7A68B61C112AEC0075FD1E /* CFNetwork.framework */,
 				DC7A68B41C112AE40075FD1E /* AudioToolbox.framework */,
-				DC7A68B21C112A700075FD1E /* Bolts.framework */,
-				DC7A68B01C112A630075FD1E /* Parse.framework */,
 				DCEB6AF61C0BE3D000A0EFB7 /* Office Hours App */,
 				DCEB6B0B1C0BE3D100A0EFB7 /* Office Hours AppTests */,
 				DCEB6AF51C0BE3D000A0EFB7 /* Products */,
