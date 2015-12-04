@@ -51,8 +51,10 @@ class StudentTableViewController: UITableViewController {
                                 for o in object {
                                     let name = o.objectForKey("name") as! String
                                     let problem = o.objectForKey("problem") as! String
+                                    let id = o.objectId!
                                     //print(self.students)
                                     let tmp_student = Student(name: name, problem: problem)!
+                                    tmp_student.id = id
                                     self.students += [tmp_student]
                                 }
                             }
@@ -96,6 +98,7 @@ class StudentTableViewController: UITableViewController {
 
         cell.nameLabel.text = student.name
         cell.problemLabel.text = student.problem
+        cell.objectID = student.id
         
         return cell
     }
@@ -110,9 +113,18 @@ class StudentTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! StudentTableViewCell
             students.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
+            let objectID = cell.objectID
+            let query = PFQuery(className: "Student")
+            query.whereKey("objectId", equalTo: objectID)
+            query.findObjectsInBackgroundWithBlock {
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                for object in objects! {
+                    object.deleteEventually()
+                }
+            }
             
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

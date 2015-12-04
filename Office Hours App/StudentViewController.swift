@@ -62,13 +62,17 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
         if submitButton === sender {
             let name = studentName.text ?? ""
             let problem = studentProblem.text ?? ""
-            
-            // Set the meal to be passed to MealTableViewController after the unwind segue.
+            let currentDate = NSDate()
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.locale = NSLocale.currentLocale()
+            dateFormatter.dateFormat = "hh:mm"
+            // print(dateFormatter.stringFromDate(currentDate))
             student = Student(name: name, problem: problem)
             
             let webstudent = PFObject(className:"Student")
             webstudent["name"] = name
             webstudent["problem"] = problem
+            webstudent["timeStamp"] = dateFormatter.stringFromDate(currentDate)
             webstudent.saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {

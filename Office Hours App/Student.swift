@@ -15,6 +15,7 @@ class Student {
     
     var name: String
     var problem: String
+    var id: String!
     
     // MARK: Initialization
     
