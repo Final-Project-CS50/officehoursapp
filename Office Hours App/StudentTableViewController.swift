@@ -51,9 +51,10 @@ class StudentTableViewController: UITableViewController {
                                 for o in object {
                                     let name = o.objectForKey("name") as! String
                                     let problem = o.objectForKey("problem") as! String
+                                    let timestamp = o.objectForKey("timeStamp") as! String
                                     let id = o.objectId!
                                     //print(self.students)
-                                    let tmp_student = Student(name: name, problem: problem)!
+                                    let tmp_student = Student(name: name, problem: problem, timestamp: timestamp)!
                                     tmp_student.id = id
                                     self.students += [tmp_student]
                                 }
@@ -95,9 +96,9 @@ class StudentTableViewController: UITableViewController {
 
         // Fetches the appropriate student for the data source layout.
         let student = students[indexPath.row]
-
         cell.nameLabel.text = student.name
         cell.problemLabel.text = student.problem
+        cell.timestampLabel.text = student.timestamp
         cell.objectID = student.id
         
         return cell

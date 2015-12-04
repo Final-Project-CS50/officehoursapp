@@ -16,17 +16,19 @@ class Student {
     var name: String
     var problem: String
     var id: String!
+    var timestamp: String
     
     // MARK: Initialization
     
-    init?(name: String, problem: String){
+    init?(name: String, problem: String, timestamp: String){
     
         // Initialize stored properties.
         self.name = name
         self.problem = problem
+        self.timestamp = timestamp
         
         // Initialization should fail if there is no name.
-        if name.isEmpty || problem.isEmpty {
+        if name.isEmpty || problem.isEmpty || timestamp.isEmpty {
             return nil
         }
         

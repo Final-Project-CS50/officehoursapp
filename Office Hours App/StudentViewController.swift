@@ -67,7 +67,7 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
             dateFormatter.locale = NSLocale.currentLocale()
             dateFormatter.dateFormat = "hh:mm"
             // print(dateFormatter.stringFromDate(currentDate))
-            student = Student(name: name, problem: problem)
+            //student = Student(name: name, problem: problem)
             
             let webstudent = PFObject(className:"Student")
             webstudent["name"] = name
@@ -81,6 +81,7 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
                     // There was a problem, check error.description
                 }
             }
+            student = Student(name: name, problem: problem, timestamp: webstudent["timeStamp"] as! String)
         }
     }
     

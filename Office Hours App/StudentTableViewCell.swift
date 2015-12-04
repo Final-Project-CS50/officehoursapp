@@ -15,6 +15,9 @@ class StudentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var problemLabel: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
+    
+    
     var objectID: String!
 
     override func awakeFromNib() {
