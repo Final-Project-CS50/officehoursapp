@@ -9,7 +9,6 @@
 import UIKit
 import Parse
 
-
 class StudentViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties

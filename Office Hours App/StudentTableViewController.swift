@@ -25,19 +25,19 @@ class StudentTableViewController: UITableViewController {
         loadCloudStudents()
         
         // Load the sample data.
-        loadSampleStudents()
+        // loadSampleStudents()
         
         
     }
-
-    func loadSampleStudents(){
-        
-        let student1 = Student(name: "Jimmy", problem: "The Mario Game")!
-        let student2 = Student(name: "John Jack", problem: "Building a hash table")!
-        let student3 = Student(name: "Pierre", problem: "Code won't compile")!
-
-        self.students += [student1, student2, student3]
-    }
+//
+//    func loadSampleStudents(){
+//        
+//        let student1 = Student(name: "Jimmy", problem: "The Mario Game")!
+//        let student2 = Student(name: "John Jack", problem: "Building a hash table")!
+//        let student3 = Student(name: "Pierre", problem: "Code won't compile")!
+//
+//        self.students += [student1, student2, student3]
+//    }
     
     func loadCloudStudents(){
                 let query = PFQuery(className:"Student")
@@ -45,13 +45,13 @@ class StudentTableViewController: UITableViewController {
                     (objects: [PFObject]?, error: NSError?) -> Void in
                         if error == nil {
                             // The find succeeded.
-                            print("Successfully retrieved \(objects!.count) scores.")
+                            //print("Successfully retrieved \(objects!.count) scores.")
                             // Do something with the found objects
                             if let object = objects {
                                 for o in object {
                                     let name = o.objectForKey("name") as! String
                                     let problem = o.objectForKey("problem") as! String
-                                    print(self.students)
+                                    //print(self.students)
                                     let tmp_student = Student(name: name, problem: problem)!
                                     self.students += [tmp_student]
                                 }
@@ -59,7 +59,6 @@ class StudentTableViewController: UITableViewController {
                             dispatch_async(dispatch_get_main_queue()) {
                                 self.tableView.reloadData()
                             }
-//                            let tmp_student = Student(name: "mark", problem: "CS50")!
                             
                         } else {
                             // Log details of the failure
@@ -81,7 +80,7 @@ class StudentTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(students.count)
+        //print(students.count)
         return  students.count
     }
 
@@ -101,15 +100,11 @@ class StudentTableViewController: UITableViewController {
         return cell
     }
     
-
-    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
-
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -117,6 +112,8 @@ class StudentTableViewController: UITableViewController {
             // Delete the row from the data source
             students.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
