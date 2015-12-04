@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class StudentTableViewController: UITableViewController {
     
@@ -22,7 +23,7 @@ class StudentTableViewController: UITableViewController {
         
         // Load the sample data.
         loadSampleStudents()
-
+        
     }
 
     func loadSampleStudents(){

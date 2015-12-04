@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class StudentViewController: UIViewController, UITextFieldDelegate {
     
@@ -28,6 +29,13 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
         
         // Handle the text field’s user input through delegate callbacks.
         studentName.delegate = self
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +65,18 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
             
             // Set the meal to be passed to MealTableViewController after the unwind segue.
             student = Student(name: name, problem: problem)
+            
+            let webstudent = PFObject(className:"Student")
+            webstudent["name"] = name
+            webstudent["problem"] = problem
+            webstudent.saveInBackgroundWithBlock {
+                (success: Bool, error: NSError?) -> Void in
+                if (success) {
+                    // The object has been saved.
+                } else {
+                    // There was a problem, check error.description
+                }
+            }
         }
     }
     
