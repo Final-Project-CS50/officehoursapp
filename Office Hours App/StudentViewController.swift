@@ -19,8 +19,8 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
 
     
     /*
-    This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
-    or constructed as part of adding a new meal.
+    This value is either passed by `StudentTableViewController` in `prepareForSegue(_:sender:)`
+    or constructed as part of adding a new student.
     */
     var student: Student?
     
