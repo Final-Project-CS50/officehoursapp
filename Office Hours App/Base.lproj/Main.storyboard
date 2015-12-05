@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--List View-->
+        <!--List-->
         <scene sceneID="MyZ-Zt-wMf">
             <objects>
                 <tableViewController id="pyH-uT-hjk" customClass="StudentTableViewController" customModule="Office_Hours_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,11 +23,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="F5M-og-6sF">
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5M-og-6sF">
                                             <rect key="frame" x="8" y="13" width="584" height="24"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgd-pj-9Mk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="522" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="542" height="24"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,7 +43,7 @@
                                             </subviews>
                                             <animations/>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CFN-Jc-9NS">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CFN-Jc-9NS">
                                             <rect key="frame" x="8" y="42" width="584" height="21"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsV-Vv-TOU">
@@ -80,7 +80,7 @@
                             <outlet property="delegate" destination="pyH-uT-hjk" id="nI6-pY-L3p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="List View" id="gF2-Ow-bsF">
+                    <navigationItem key="navigationItem" title="List" id="gF2-Ow-bsF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gyQ-om-Vtc">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="Fzv-YO-Pa6"/>
@@ -92,35 +92,7 @@
             </objects>
             <point key="canvasLocation" x="1538" y="1147"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="oVu-lE-q4O">
-            <objects>
-                <viewController id="v7c-iK-maY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XpI-AU-el8"/>
-                        <viewControllerLayoutGuide type="bottom" id="dI4-qx-jE9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="l7B-Nf-P2G">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you. Someone will be with you shortly." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oA-Tc-H0y">
-                                <rect key="frame" x="20" y="72" width="560" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ykc-GQ-pSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3052" y="-389"/>
-        </scene>
-        <!--Home-->
+        <!--Request-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StudentViewController" customModule="Office_Hours_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,23 +104,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-zG-Ce2">
-                                <rect key="frame" x="20" y="124" width="560" height="114"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-zG-Ce2">
+                                <rect key="frame" x="20" y="104" width="560" height="156"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please provide some information." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-oh-Apq">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student Name?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aY2-KO-PU3">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="36" width="560" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Which problem are you stuck on?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPM-ry-Vdd">
-                                        <rect key="frame" x="0.0" y="42" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="81" width="560" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5H3-FI-FmS">
-                                        <rect key="frame" x="0.0" y="84" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="126" width="560" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
@@ -163,11 +142,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eJd-zG-Ce2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4iw-TY-Yfe"/>
-                            <constraint firstItem="eJd-zG-Ce2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="kEi-Z2-pgo"/>
+                            <constraint firstItem="eJd-zG-Ce2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="kEi-Z2-pgo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eJd-zG-Ce2" secondAttribute="trailing" id="kY1-Zr-UDf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="PJy-Yx-W6W"/>
+                    <navigationItem key="navigationItem" title="Request" id="PJy-Yx-W6W"/>
                     <connections>
                         <outlet property="studentName" destination="aY2-KO-PU3" id="k6M-BZ-nXt"/>
                         <outlet property="studentProblem" destination="YPM-ry-Vdd" id="UDN-vX-nhZ"/>
@@ -210,34 +189,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to CS50 Office Hours!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGs-HQ-hRC">
-                                <rect key="frame" x="20" y="167" width="320" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-Zk-NBi">
-                                <rect key="frame" x="20" y="196" width="320" height="207"/>
-                                <animations/>
-                                <string key="text">We know that this can be a stressful experience, so we've developed an app to help TF's more efficiently attend to students.
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QHB-pw-r1N">
+                                <rect key="frame" x="20" y="124" width="560" height="222"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Office Hours!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGs-HQ-hRC">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="27"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-Zk-NBi">
+                                        <rect key="frame" x="0.0" y="57" width="556" height="102"/>
+                                        <animations/>
+                                        <string key="text">We know that Office Hours can be a stressful experience. We've developed this app so that TF's can help you more efficiently.
 
-When you enter the app, you'll see a blue (+) sign on the top right corner. Press that button and provide us with a bit of information, and you'll be added to the list.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybD-Ra-3MS">
-                                <rect key="frame" x="20" y="411" width="117" height="30"/>
+On the following page, you'll see a list of students that have asked for help. Tap the blue (+) symbol to add yourself to the bottom of the queue.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybD-Ra-3MS">
+                                        <rect key="frame" x="0.0" y="188" width="148" height="34"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Let's get started!"/>
+                                        <connections>
+                                            <segue destination="hUC-iS-Bzh" kind="show" id="Ie9-3G-8di"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <state key="normal" title="Let's get started!"/>
-                                <connections>
-                                    <segue destination="hUC-iS-Bzh" kind="show" id="Ie9-3G-8di"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QHB-pw-r1N" firstAttribute="top" secondItem="ZVH-zn-n7w" secondAttribute="bottom" constant="60" id="1mw-7c-z4Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QHB-pw-r1N" secondAttribute="trailing" id="hvb-W7-WcM"/>
+                            <constraint firstItem="QHB-pw-r1N" firstAttribute="leading" secondItem="qh3-B8-aqs" secondAttribute="leadingMargin" id="ibt-RO-iNG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="P5T-PN-elj"/>
                 </viewController>
