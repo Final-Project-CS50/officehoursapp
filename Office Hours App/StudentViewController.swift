@@ -17,11 +17,6 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var studentProblem: UITextField!
 
-    
-    /*
-    This value is either passed by `StudentTableViewController` in `prepareForSegue(_:sender:)`
-    or constructed as part of adding a new student.
-    */
     var student: Student?
     
     override func viewDidLoad() {
@@ -40,13 +35,16 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
         // Hide the keyboard.
+        
         textField.resignFirstResponder()
         return true
     }
@@ -55,9 +53,10 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    // MARK: navigation
+    // MARK: Navigation
     
-    // This method lets you configure a view controller before it's presented.
+    // Configure view controller.
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if submitButton === sender {
             let name = studentName.text ?? ""
@@ -66,8 +65,6 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
             let dateFormatter = NSDateFormatter()
             dateFormatter.locale = NSLocale.currentLocale()
             dateFormatter.dateFormat = "hh:mm"
-            // print(dateFormatter.stringFromDate(currentDate))
-            //student = Student(name: name, problem: problem)
             
             let webstudent = PFObject(className:"Student")
             webstudent["name"] = name
@@ -76,7 +73,7 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
             webstudent.saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {
-                    // The object has been saved.
+                    // The student has been saved.
                 } else {
                     // There was a problem, check error.description
                 }
@@ -84,11 +81,6 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
             student = Student(name: name, problem: problem, timestamp: webstudent["timeStamp"] as! String)
         }
     }
-    
-    // MARK: Actions
-    
-
-    
 
 }
 

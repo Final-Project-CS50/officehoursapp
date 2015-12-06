@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         sleep(1)
         
-        //copied from parse getting started guide
+        // Copied from Parse "getting started guide"
         Parse.enableLocalDatastore()
         
         Parse.setApplicationId("tlGOJzNMZjiycbB94mTwFmAr5QHk5Jr89jLHQ4Y9",
