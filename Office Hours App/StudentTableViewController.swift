@@ -117,9 +117,10 @@ class StudentTableViewController: UITableViewController {
             let cell = tableView.cellForRowAtIndexPath(indexPath) as! StudentTableViewCell
             students.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            let objectID = cell.objectID
+
             let query = PFQuery(className: "Student")
-            query.whereKey("objectId", equalTo: objectID)
+            query.whereKey("problem", equalTo: cell.problemLabel.text!)
+            query.whereKey("timeStamp", equalTo: cell.timestampLabel.text!)
             query.findObjectsInBackgroundWithBlock {
                 (objects: [PFObject]?, error: NSError?) -> Void in
                 for object in objects! {
